@@ -188,9 +188,6 @@
             font-weight 700
             color #f30
             margin-top 5px
-          .choose-button
-            display block
-            margin 5px auto
     .button    
       float right 
       margin-right 10px
