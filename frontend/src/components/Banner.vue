@@ -24,7 +24,7 @@
           <a href="/"><a-icon type="home" />首页</a>
         </a-menu-item>
         <a-menu-item>
-          <a href="/category"><a-icon type="tag" />分类</a>
+          <a href="/#/category"><a-icon type="tag" />分类</a>
         </a-menu-item>
       </a-menu>
     </a-row>

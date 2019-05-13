@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  //mode: 'history', // build
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   },
@@ -12,17 +12,17 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import('../pages/Home.vue')
+      component: () => import('@/pages/Home.vue')
     },
     {
       path: '/category',
       name: 'CategoryPage',
-      component: () => import('../pages/CategoryPage.vue')
+      component: () => import('@/pages/CategoryPage.vue')
     },
     {
       path: '/:id',
       name: 'MovieDetail',
-      component: () => import('../pages/movie-detail/MovieDetail.vue')
+      component: () => import('@/pages/movie-detail/MovieDetail.vue')
     }
   ]
 })
