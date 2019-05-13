@@ -1,6 +1,6 @@
 # Just Movies
 
-从 json 文件中读取数据的版本。
+直接从 json 文件中读取数据的前端版本。
 
 ```bash
 ├── Movie-frontend          // 源码
