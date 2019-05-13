@@ -1,6 +1,6 @@
 <template>
   <div class="search-list-movie-item">
-    <img class="poster" v-bind:src="movie.poster" alt="">
+    <img class="poster" v-bind:src="movie.poster" alt="" :onerror="noImg">
     <div class="movie-info">
       <div class="title">{{ movie.title }}</div>
       <div class="year">{{ movie.year }}</div>
@@ -18,6 +18,11 @@
           return {}
         }
       },
+    },
+    data() {
+      return {
+        noImg: 'this.src="' + require('../../static/no-img.jpeg') + '"',
+      }
     },
   }
 </script>

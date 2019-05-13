@@ -129,7 +129,7 @@ DATABASES = {
 }
 ```
 
-&nbsp;
+
 
 ##### Json to Database
 
@@ -148,7 +148,7 @@ python3 json-to-database.py
 
 
 
-
+&nbsp;
 
 ## Requirments
 

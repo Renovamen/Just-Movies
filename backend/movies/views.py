@@ -50,7 +50,6 @@ def get_search(request, text):
 
     movies = Movie.objects.filter(Q(title__exact = text) | Q(title__icontains = text) | Q(aka__icontains = text))
     serializer = MovieSerializer(movies[:100], many = True)
-    print(serializer)
 
     context = {
         'movies': serializer.data,
