@@ -4,6 +4,16 @@ Django + Vue 实现的电影 Web 应用。
 
 &nbsp;
 
+## Preview
+
+https://renovamen.github.io/Just-Movies/
+
+（因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的纯前端版本...
+
+
+
+&nbsp;
+
 ## Environment
 
 - Vue 2.9.6
@@ -32,8 +42,8 @@ Django + Vue 实现的电影 Web 应用。
 │   ├── dist                                 // 打包好的 Vue 模板
 │   ├── manage.py
 │   ├── json-to-database.py                  // 把 json 中的数据导入数据库
-│   └── movies.sqlite3                       // 存储电影数据的数据库
-│   ├── films_all.json                       // 存储电影数据的 json 文件
+│   ├── movies.sqlite3                       // 存储电影数据的数据库
+│   └── films_all.json                       // 存储电影数据的 json 文件
 └── frontend
     ├── build
     ├── config
