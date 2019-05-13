@@ -8,7 +8,7 @@ Django + Vue 实现的电影 Web 应用。
 
 https://renovamen.github.io/Just-Movies/
 
-（因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的纯前端版本...
+（因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的[纯前端版本](https://github.com/Renovamen/Just-Movies/tree/gh-pages/frontend-json)...
 
 
 
