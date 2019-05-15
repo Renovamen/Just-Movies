@@ -11,7 +11,8 @@ Vue.use(VueAntd)
 
 Vue.prototype.$http = axios
 Vue.prototype.HOST = '/api'
-axios.defaults.baseURL = 'http://127.0.0.1:8000'
+axios.defaults.baseURL = 'http://127.0.0.1:8000' // 本地
+//axios.defaults.baseURL = 'http://118.25.157.149:80' // 部署到服务器
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-fromurlencodeed;charset=UTF-8'
 
 /* eslint-disable no-new */

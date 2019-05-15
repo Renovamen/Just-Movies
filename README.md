@@ -24,7 +24,7 @@ https://renovamen.github.io/Just-Movies/
 
 ## Structure
 
-```‘
+```
 ├── backend
 │   ├── Just_Movies
 │   │   ├── __init__.py
@@ -41,30 +41,33 @@ https://renovamen.github.io/Just-Movies/
 │   │   └── views.py                         // 视图
 │   ├── dist                                 // 打包好的 Vue 模板
 │   ├── manage.py
+│   ├── requirements.txt                     // 后端依赖
 │   ├── json-to-database.py                  // 把 json 中的数据导入数据库
 │   ├── movies.sqlite3                       // 存储电影数据的数据库
 │   └── films_all.json                       // 存储电影数据的 json 文件
-└── frontend
-    ├── build
-    ├── config
-    ├── index.html
-    ├── package.json
-    ├── src
-    │   ├── App.vue                          // 入口页面
-    │   ├── components                       // 组件
-    │   │   ├── Banner.vue                   // banner 组件
-    │   │   ├── MovieListItem.vue            // 分类页电影列表中的每个电影
-    │   │   └── SearchListMovieItem.vue      // 搜索栏下拉列表
-    │   ├── main.js                          // 入口，加载组件、初始化等
-    │   ├── pages                            // 页面
-    │   │   ├── CategoryPage.vue             // 分类页
-    │   │   ├── Home.vue                     // 首页
-    │   │   └── movie-detail                 // 电影详情
-    │   │       ├── MovieDetail.vue          // 详情页
-    │   │       ├── MovieIntroduction.vue    // 介绍（导演、编剧、演员等）区域
-    │   │       └── MovieRate.vue            // 评分区域
-    │   └── router                           // 路由
-    └── static                               // 静态文件（图片、films.json 等）
+├── frontend
+│   ├── build
+│   ├── config
+│   ├── index.html
+│   ├── package.json
+│   ├── src
+│   │   ├── App.vue                          // 入口页面
+│   │   ├── components                       // 组件
+│   │   │   ├── Banner.vue                   // banner 组件
+│   │   │   ├── MovieListItem.vue            // 分类页电影列表中的每个电影
+│   │   │   └── SearchListMovieItem.vue      // 搜索栏下拉列表
+│   │   ├── main.js                          // 入口，加载组件、初始化等
+│   │   ├── pages                            // 页面
+│   │   │   ├── CategoryPage.vue             // 分类页
+│   │   │   ├── Home.vue                     // 首页
+│   │   │   └── movie-detail                 // 电影详情
+│   │   │       ├── MovieDetail.vue          // 详情页
+│   │   │       ├── MovieIntroduction.vue    // 介绍（导演、编剧、演员等）区域
+│   │   │       └── MovieRate.vue            // 评分区域
+│   │   └── router                           // 路由
+│   └── static                               // 静态文件（图片、films.json 等）
+└── script
+        └── uwsgi.ini                        // uWSGI 配置文件（部署）
 ```
 
 
@@ -115,7 +118,7 @@ urlpatterns = [
 
 ```bash
 cd Just-Movies/backend
-
+pip install -r requirements.txt
 python3 manage.py runserver 127.0.0.1:8000
 ```
 
@@ -160,6 +163,32 @@ python3 json-to-database.py
 
 &nbsp;
 
+## Set Up
+
+uWSGI + Nginx。
+
+在 `frontend/src/main.js` 中把后端接口地址改成服务器地址：
+
+```js
+axios.defaults.baseURL = ''
+```
+
+在 `script/uwsgi.ini` 中更改（服务器上的）项目路径等。
+
+配置 Nginx。
+
+启动：
+
+```bash
+cd script
+uwsgi --ini uwsgi.ini
+sudo service nginx restart
+```
+
+
+
+&nbsp;
+
 ## Requirments
 
 ### Frontend
@@ -177,3 +206,4 @@ python3 json-to-database.py
 - [Django](https://github.com/django/django)
 - [Django REST framework](https://github.com/encode/django-rest-framework)：构建 Web API
 - [django-cors-headers](https://github.com/ottoyiu/django-cors-headers)：跨域
+- [uwsgi](https://github.com/unbit/uwsgi)：部署
