@@ -67,7 +67,7 @@ https://renovamen.github.io/Just-Movies/
 │   │   └── router                           // 路由
 │   └── static                               // 静态文件（图片、films.json 等）
 └── script
-    └── uwsgi.ini                        // uWSGI 配置文件（部署）
+    └── uwsgi.ini                            // uWSGI 配置文件（部署）
 ```
 
 
