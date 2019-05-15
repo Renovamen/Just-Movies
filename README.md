@@ -10,8 +10,6 @@ https://renovamen.github.io/Just-Movies/
 
 （因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的[纯前端版本](https://github.com/Renovamen/Just-Movies/tree/gh-pages/frontend-json)...
 
-
-
 &nbsp;
 
 ## Environment
@@ -19,6 +17,27 @@ https://renovamen.github.io/Just-Movies/
 - Vue 2.9.6
 - Django 2.1.1
 - Python 3.6.7
+
+&nbsp;
+
+## Requirments
+
+### Frontend
+
+- [Vue](https://github.com/vuejs/vue)
+- [vue-router](https://github.com/vuejs/vue-router)：路由管理
+- [axios](https://github.com/axios/axios)：请求数据
+- [ant-design-vue](https://github.com/vueComponent/ant-design-vue)：UI 组件库
+- [stylus](https://github.com/stylus/stylus)：CSS 预编译器
+
+
+
+### Backend
+
+- [Django](https://github.com/django/django)
+- [Django REST framework](https://github.com/encode/django-rest-framework)：构建 Web API
+- [django-cors-headers](https://github.com/ottoyiu/django-cors-headers)：跨域
+- [uwsgi](https://github.com/unbit/uwsgi)：部署
 
 &nbsp;
 
@@ -69,8 +88,6 @@ https://renovamen.github.io/Just-Movies/
 └── script
     └── uwsgi.ini                            // uWSGI 配置文件（部署）
 ```
-
-
 
 &nbsp;
 
@@ -159,8 +176,6 @@ python3 manage.py migrate
 python3 json-to-database.py
 ```
 
-
-
 &nbsp;
 
 ## Set Up
@@ -185,25 +200,36 @@ uwsgi --ini uwsgi.ini
 sudo service nginx restart
 ```
 
-
-
 &nbsp;
 
-## Requirments
+## Function
 
-### Frontend
+### Home Page
 
-- [Vue](https://github.com/vuejs/vue)
-- [vue-router](https://github.com/vuejs/vue-router)：路由管理
-- [axios](https://github.com/axios/axios)：请求数据
-- [ant-design-vue](https://github.com/vueComponent/ant-design-vue)：UI 组件库
-- [stylus](https://github.com/stylus/stylus)：CSS 预编译器
+首页显示所有电影，带分页功能：
+
+![img](screenshot/home.jpg)
 
 
 
-### Backend
+### Category Page
 
-- [Django](https://github.com/django/django)
-- [Django REST framework](https://github.com/encode/django-rest-framework)：构建 Web API
-- [django-cors-headers](https://github.com/ottoyiu/django-cors-headers)：跨域
-- [uwsgi](https://github.com/unbit/uwsgi)：部署
+点击"分类"进入分类页。分类页可以选择只显示特定地区和类型的电影，带分页功能：
+
+![img](screenshot/category.jpg)
+
+
+
+### Search
+
+可以在搜索栏对电影的名称和别名进行模糊搜索：
+
+![img](screenshot/search.jpg)
+
+
+
+### Movie Detail Page
+
+从以上页面点击某个电影都可以进入它的详情页。电影详情页显示电影详细信息，包括导演、编剧、主演、类型、地区、上映时间、简介、评分等：
+
+![img](screenshot/detail.jpg)
