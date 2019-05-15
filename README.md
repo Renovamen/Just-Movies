@@ -37,7 +37,7 @@ https://renovamen.github.io/Just-Movies/
 - [Django](https://github.com/django/django)
 - [Django REST framework](https://github.com/encode/django-rest-framework)：构建 Web API
 - [django-cors-headers](https://github.com/ottoyiu/django-cors-headers)：跨域
-- [uwsgi](https://github.com/unbit/uwsgi)：部署
+- [uWSGI](https://github.com/unbit/uwsgi)：部署
 
 &nbsp;
 
