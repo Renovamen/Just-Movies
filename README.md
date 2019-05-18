@@ -8,7 +8,7 @@ Django + Vue 实现的电影 Web 应用。
 
 https://renovamen.github.io/Just-Movies/
 
-（因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的[纯前端版本](https://github.com/Renovamen/Just-Movies/tree/gh-pages/frontend-json)...
+（因为应付交作业的服务器只租了一个月，所以演示页是直接从 json 文件中读取数据的[纯前端版本](https://github.com/Renovamen/Just-Movies/tree/gh-pages)...
 
 &nbsp;
 
@@ -30,14 +30,20 @@ https://renovamen.github.io/Just-Movies/
 - [ant-design-vue](https://github.com/vueComponent/ant-design-vue)：UI 组件库
 - [stylus](https://github.com/stylus/stylus)：CSS 预编译器
 
-
-
 ### Backend
 
 - [Django](https://github.com/django/django)
 - [Django REST framework](https://github.com/encode/django-rest-framework)：构建 Web API
 - [django-cors-headers](https://github.com/ottoyiu/django-cors-headers)：跨域
-- [uWSGI](https://github.com/unbit/uwsgi)：部署
+
+### Database
+
+- sqlite3
+
+### Set Up
+
+- [uWSGI](https://github.com/unbit/uwsgi)
+- Nginx
 
 &nbsp;
 
@@ -131,7 +137,7 @@ urlpatterns = [
 
 &nbsp;
 
-#### Run
+#### Run Locally
 
 ```bash
 cd Just-Movies/backend
@@ -178,7 +184,7 @@ python3 json-to-database.py
 
 &nbsp;
 
-## Set Up
+### Set Up
 
 uWSGI + Nginx。
 
